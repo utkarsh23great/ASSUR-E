@@ -1,0 +1,35 @@
+package com.dbutils;
+import java.util.*;
+public class Sort {
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		Number nums[]=new Number[n];
+		sc.nextLine();
+		for(int i=0;i<n;i++) {
+			String inp[]=sc.nextLine().split(" ");
+			nums[i]=new Number(inp[0],inp[1]);
+		}
+		
+		Arrays.sort(nums, new Comparator(Number n1,Number n2) {
+
+			@Override
+			public int compare(Object o1, Object o2) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+			
+		});
+	}
+
+}
+
+
+class Number{
+	int a;
+	int b;
+	public Number(String a,String b) {
+		this.a=Integer.parseInt(a);
+		this.b=Integer.parseInt(b);
+	}
+}
